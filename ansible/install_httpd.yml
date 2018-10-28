@@ -1,0 +1,5 @@
+- hosts: webservers
+  sudo: yes
+  tasks:    
+   - name: install httpd
+     shell: yum install httpd -y

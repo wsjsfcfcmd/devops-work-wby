@@ -1,0 +1,7 @@
+- hosts: webservers
+  sudo: yes
+  tasks:    
+   - name: Copy Remote-To-Remote (from serverA to serverB)
+     synchronize: src=/home/ec2-user/src/{{ver}}/ dest=/var/www/html/
+   - name: restart httpd
+     service: name=httpd state=restarted
