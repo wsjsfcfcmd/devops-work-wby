@@ -1,14 +1,14 @@
-### Devops作业
+## Devops作业
 - [1-环境部署](#1-环境部署)
 - [2-ddns](#2-ddns)
 - [3-版本更新](#3-版本更新)
 
-####1-环境部署(CloudFormation + Manual)
+### 1-环境部署(CloudFormation + Manual)
 
 系统架构图
 ![image](https://github.com/wsjsfcfcmd/devops-work-wby/blob/master/image/architecture.png?raw=true)
 
-####2-ddns
+### 2-ddns
 利用阿里云sdk，每次判断前，先删除@记录，再次添加所有需要更新的@的A记录
 [python ddns代码](https://github.com/wsjsfcfcmd/devops-work-wby/blob/master/ddns.py) 
 ```
@@ -25,7 +25,7 @@ def lambda_handler(event, context):
     for value in values:
         dns_add(domain, RR, Type, value)
 ```
-###3-版本更新
+### 3-版本更新
 
 通过ansible远程控制来更新系统
 
